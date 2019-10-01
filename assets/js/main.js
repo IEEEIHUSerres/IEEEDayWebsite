@@ -20,8 +20,8 @@
         /* ==========================================================================
            countdown timer
            ========================================================================== */
-        jQuery('#clock').countdown('2019/10/3', function (event) {
-            let $this = jQuery(this).html(event.strftime(''
+        jQuery('#clock').countdown('2019/10/7', function (event) {
+            jQuery(this).html(event.strftime(''
                 + '<div class="time-entry days"><span>%-D</span> Days</div> '
                 + '<div class="time-entry hours"><span>%H</span> Hours</div> '
                 + '<div class="time-entry minutes"><span>%M</span> Minutes</div> '
@@ -60,7 +60,6 @@
         /* Back Top Link active
         ========================================================*/
         let offset = 200;
-        let duration = 500;
         $(window).scroll(function () {
             if ($(this).scrollTop() > offset) {
                 $('.back-to-top').fadeIn(400);
@@ -69,7 +68,7 @@
             }
         });
 
-        $('.page-scroll').on('click', (event) => {
+        $('.page-scroll').on('click', () => {
             const $slicknavBtn = $('.slicknav_btn.slicknav_open');
             $slicknavBtn.click()
         });
